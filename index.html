@@ -185,7 +185,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-12-05 10:29:55 / 修改时间：21:41:07" itemprop="dateCreated datePublished" datetime="2021-12-05T10:29:55+08:00">2021-12-05</time>
+              <time title="创建时间：2021-12-05 10:29:55 / 修改时间：21:46:07" itemprop="dateCreated datePublished" datetime="2021-12-05T10:29:55+08:00">2021-12-05</time>
             </span>
 
           
@@ -205,120 +205,14 @@
 <li>域名麻烦，一年又要花近百元</li>
 <li>找不到合适的主题，用着不顺手。。。。。</li>
 </ul>
-<p>作为一个白嫖党，花这么多钱<del>装逼</del> ，实在是不和我心意，遂将目光投向了hexo + github 的方案，其有以下优点</p>
-<ul>
-<li>hexo是静态博客响应快</li>
-<li>托管在github仓库中，无开销，不操心</li>
-<li>最最重要的一点可以通过“github用户名.github.io”作为域名去访问，凸显了它是一个技术博客且足够酷</li>
-</ul>
-<p>定好了方案，下面就开始搭建了 </p>
-<p>具体部署流程</p>
-<h1 id="具体部署流程"><a href="#具体部署流程" class="headerlink" title="具体部署流程"></a>具体部署流程</h1><h2 id="nodejs下载与安装"><a href="#nodejs下载与安装" class="headerlink" title="nodejs下载与安装"></a>nodejs下载与安装</h2><p>下载完成后一路下一步就行了，完成后打开cmd输入以下命令，看看是否安装成功</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v  #查看版本npm -v</span><br></pre></td></tr></table></figure>
-
-<p>出现版本号及成功</p>
-<h2 id="Hexo框架安装"><a href="#Hexo框架安装" class="headerlink" title="Hexo框架安装"></a>Hexo框架安装</h2><p>1.更换镜像源，安装cnpm</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry==https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p>输入cnpm，出现自动补全即安装成功</p>
-<p><img src="https://github.com/JiangShanCode/MyBlogImages/blob/master/2021/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Hexo-Github-pages/20210328210612.png?raw=true" alt="https://github.com/JiangShanCode/MyBlogImages/blob/master/2021/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Hexo-Github-pages/20210328210612.png?raw=true"></p>
-<p>2.安装hexo</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<p>下载完成后,hexo -v验证下</p>
-<p><img src="https://github.com/JiangShanCode/MyBlogImages/raw/master/2021/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Hexo-Github-pages/20210328210652.png" alt="https://github.com/JiangShanCode/MyBlogImages/raw/master/2021/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Hexo-Github-pages/20210328210652.png"></p>
-<p>image-20210328154501521</p>
-<h2 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h2><p>1.建立博客根目录，之后所以操作均在该目录下，如果失败删掉重来即可</p>
-<p>2.初始化</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-
-<p>生成一系列文件夹</p>
-<p><img src="https://github.com/JiangShanCode/MyBlogImages/raw/master/2021/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Hexo-Github-pages/20210328210700.png" alt="https://github.com/JiangShanCode/MyBlogImages/raw/master/2021/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Hexo-Github-pages/20210328210700.png"></p>
-<p>image-20210328155715953</p>
-<p>3.启动</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://github.com/JiangShanCode/MyBlogImages/raw/master/2021/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Hexo-Github-pages/20210328210708.png" alt="https://github.com/JiangShanCode/MyBlogImages/raw/master/2021/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Hexo-Github-pages/20210328210708.png"></p>
-<p>通过4000端口访问，用来调试和预览</p>
-<p>4.常用hexo命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo g      //根据 source，更新 public</span><br><span class="line">hexo d      //根据 public，更新 .deploy_git</span><br><span class="line">hexo clean  //对hexo g生成的文件进行清理</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>source：资源文件夹。用来存放图片、Markdown 文档（文章、草稿）、各种页面（分类、关于页面等）。</li>
-<li>public：将 source 文件夹里的 Markdown 文档，转换成 index.html。再结合主题进行渲染，就是我们最终看到的博客。</li>
-<li>.deploy_git：将 public 文件夹的内容提交到 Github 后生成，内容与 public 文件夹基本一致。</li>
-</ul>
-<h2 id="部署到Github"><a href="#部署到Github" class="headerlink" title="部署到Github"></a>部署到Github</h2><p>1.建立空仓库，仓库名为’username of github’.github.io</p>
-<p>2.在博客根目录下安装git插件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-
-<p>3.配置_config.yml，点击clone - ssh，获得repo地址，如下图所示</p>
-<p><img src="https://github.com/JiangShanCode/MyBlogImages/raw/master/2021/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Hexo-Github-pages/20210328210732.png" alt="https://github.com/JiangShanCode/MyBlogImages/raw/master/2021/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Hexo-Github-pages/20210328210732.png"></p>
-<p>4.<code>hexo g + hexo d</code>推到远端，就可使用域名’username of github’.github.io访问了</p>
-<h1 id="一些折腾"><a href="#一些折腾" class="headerlink" title="一些折腾"></a>一些折腾</h1><p>​ 经过上述操作，我们已经得到了一个基础的博客，下面我们来进行一些改进:full_moon_with_face:</p>
-<h2 id="使用密钥链接github"><a href="#使用密钥链接github" class="headerlink" title="使用密钥链接github"></a>使用密钥链接github</h2><p>​ 我们会发现每次deploy都需要输入密码连接github，这是非常不方便的。我们可以通过配置SSH Key来实现免密登录</p>
-<p>1.下载<code>git</code>工具并安装</p>
-<p>2.打开<code>Git Bash</code>，执行下列命令，生成公钥与私钥</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C &quot;your_github_email@example.com&quot;</span><br></pre></td></tr></table></figure>
-
-<p>密码输入完成后，提示生成成功，并显示密钥指纹信息；此时在前面指定的目录下会看到有两个新的文件：<code>id_rsa.pub</code>/<code>id_rsa</code></p>
-<p>3.添加密钥到 <code>ssh-agent</code></p>
-<p>打开<code>Git Bash</code>，输入下列命令，启动<code>ssh-agent</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eval `ssh-agent -s`</span><br></pre></td></tr></table></figure>
-
-<p>将密钥添加到 <code>ssh-agent</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
-
-<p>4.添加密钥到 Git 仓库使用的账号</p>
-<p>登陆 <a target="_blank" rel="noopener" href="http://www.github.com/">GitHub</a>，点击右上角头像，依次进入 <code>Settings</code>-&gt;<code>SSH And GPD Keys</code>，点击 <code>Add SSH key</code>，在 <code>Title</code> 中输入密钥描述信息，在 <code>Key</code> 中输入刚才生成的公钥<code>id_rsa.pub</code>，点击 <code>Add key</code>，添加公钥</p>
-<p><img src="https://github.com/JiangShanCode/MyBlogImages/raw/master/2021/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Hexo-Github-pages/20210328210738.png" alt="https://github.com/JiangShanCode/MyBlogImages/raw/master/2021/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Hexo-Github-pages/20210328210738.png"></p>
-<p>image-20210328170917747</p>
-<p>5.连接验证</p>
-<p>打开<code>Git Bash</code>，输入下列命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://github.com/JiangShanCode/MyBlogImages/raw/master/2021/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Hexo-Github-pages/20210328210743.png" alt="https://github.com/JiangShanCode/MyBlogImages/raw/master/2021/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Hexo-Github-pages/20210328210743.png"></p>
-<p>image-20210328171111481</p>
-<p>成功:v:</p>
-<h2 id="建立评论系统"><a href="#建立评论系统" class="headerlink" title="建立评论系统"></a>建立评论系统</h2><p>​ 经过多次尝试后，笔者使用基于 leancloud 的无后端评论系统：<a href="https://link.zhihu.com/?target=https://valine.js.org/%23/">Valine</a>来搭建自己评论系统，他支持markdown，也没有啥稀奇古怪的问题:tired_face:</p>
-<p>1.注册<a target="_blank" rel="noopener" href="https://leancloud.app/">leancloud</a>并创建一个应用，这里推荐国际版，记住自己的AppID和Appkey</p>
-<p>2.在<code>themes\yilia-plus\layout\_partial\post</code>目录下，新建<code>valine.ejs</code>文件，写进如下代码</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if ((theme.valine.type === 2 || (theme.valine.type === 1 &amp;&amp; post.comments)) &amp;&amp; !index &amp;&amp; theme.valine.enable)&#123; %&gt;    &lt;div id=&quot;valine-container&quot; style=&quot;margin: 0 30px ; background-color: #fff;&quot; &gt;&lt;/div&gt;    &lt;!--Leancloud 操作库:--&gt;    &lt;script src=&quot;//cdn1.lncld.net/static/js/3.0.4/av-min.js&quot;&gt;&lt;/script&gt;    &lt;!--Valine 的核心代码库--&gt;    &lt;script src=&quot;//unpkg.com/valine/dist/Valine.min.js&quot;&gt;&lt;/script&gt;    &lt;script&gt;        var notify = &#x27;&lt;%= theme.valine.notify %&gt;&#x27; == true ? true : false;        var verify = &#x27;&lt;%= theme.valine.verify %&gt;&#x27; == true ? true : false;        new Valine(&#123;            av: AV,            el: &#x27;#valine-container&#x27;,            emoticon_url: &#x27;https://cloud.panjunwen.com/alu&#x27;,            emoticon_list: [&quot;狂汗.png&quot;,&quot;不说话.png&quot;,&quot;汗.png&quot;,&quot;坐等.png&quot;,&quot;献花.png&quot;,&quot;不高兴.png&quot;,&quot;中刀.png&quot;,&quot;害羞.png&quot;,&quot;皱眉.png&quot;,&quot;小眼睛.png&quot;,&quot;暗地观察.png&quot;],            app_id: &#x27;&lt;%= theme.valine.appid %&gt;&#x27;,            app_key: &#x27;&lt;%= theme.valine.appkey %&gt;&#x27;,            placeholder: &#x27;&lt;%= theme.valine.placeholder %&gt;&#x27;            &#125;);    &lt;/script&gt;&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
-
-<p>3.修改主题配置文件，打开文件<code>themes\yilia-plus\_config.yml</code>，修改配置</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#6.valine 评论系统，到leancloud进行注册# https://leancloud.app/valine:  enable: true  appid: &#x27;Syt4D2WNGDoanRDjFItYm7zm-MdYXbMMI&#x27;  # Leancloud应用的appId  appkey: &#x27;7Vpz2nYCUjecmNGnpVnGrbyY&#x27;          # Leancloud应用的appKey  verify: true      # 验证码  notify: true       # 评论回复提醒  avatar: mp        # 评论列表头像样式（https://valine.js.org/avatar）  placeholder: ヾﾉ≧∀≦)o来啊，快活啊! # 评论框占位符  type: 1 # -1需要再文章md开头加入comments:true - 2全开评论  pageSize: 10</span><br></pre></td></tr></table></figure>
-
-<p>与<code>valine.ejs</code>中的配置项一一对应</p>
-<p>4.打开 <code>themes\yilia-plus\layout\_partial\article.ejs</code> 文件，添加</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (theme.valine &amp;&amp; theme.valine.appid &amp;&amp; theme.valine.appkey)&#123; %&gt;  &lt;%- partial(&#x27;post/valine&#x27;, &#123;    key: post.slug,    title: post.title,    url: config.url+url_for(post.path)  &#125;) %&gt;&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
-
-<p>5.重启博客，评论可以在leancloud中查看</p>
-<p><img src="https://github.com/JiangShanCode/MyBlogImages/raw/master/2021/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Hexo-Github-pages/20210328210749.png" alt="https://github.com/JiangShanCode/MyBlogImages/raw/master/2021/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Hexo-Github-pages/20210328210749.png"></p>
-<p>image-20210328174738118</p>
-<p>更多设置及玩法，可以查阅<a target="_blank" rel="noopener" href="https://deserts.io/valine-admin-document/">官方文档</a>:full_moon_with_face:</p>
-<h2 id="绑定个性域名"><a href="#绑定个性域名" class="headerlink" title="绑定个性域名"></a>绑定个性域名</h2><p>​ 现在我们可以通过<code>github_username.github.io</code>去访问我们的博客。如果想更进一步凸显个性，可以给它绑定自己的域名</p>
-<p>绑定域名需要在 <code>域名解析服务商</code> 和 <strong><code>github</code></strong> 两边都进行操作。</p>
-<ul>
-<li>在域名解析服务商进行个人域名解析，将域名绑定到个人 <code>github pages</code>。</li>
-<li>同时在 <code>github pages</code> 需要配置 <code>CNAME</code> 文件重定向到你的域名。</li>
-</ul>
-<p>具体操作如下:</p>
-<p>1.域名购买</p>
-<p>推荐通过<a target="_blank" rel="noopener" href="https://mi.aliyun.com/?spm=5176.10695662.1158081.5.4a9b4234cDSerQ">阿里云</a>购买域名，带免费的DNS解析</p>
-<p>2.<code>github pages</code> 方面的 <code>CNAME</code> 文件配置</p>
-<p>在<code>./source</code>下新建名为<code>CNAME</code>的文件，无后缀，里面写入自己的域名</p>
-<p>3.域名解析设置</p>
-<p>进入域名解析设置，进行如下配置</p>
-<p><img src="https://github.com/JiangShanCode/MyBlogImages/raw/master/2021/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Hexo-Github-pages/20210328210755.png" alt="https://github.com/JiangShanCode/MyBlogImages/raw/master/2021/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Hexo-Github-pages/20210328210755.png"></p>
-<p>image-20210328195612671</p>
-<p>其中原域名对应的ip可以通过<code>ping</code>原域名获得</p>
-<p>4.现在就可以通过新域名进行访问了:clap:</p>
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty?t=1111">基于hexo的博客搭建</a></li>
-<li><a target="_blank" rel="noopener" href="http://zydecx.github.io/2015/08/git-ssh.html">使用SSH密钥连接Git仓库</a></li>
-<li><a target="_blank" rel="noopener" href="https://ioliu.cn/2017/add-valine-comments-to-your-blog/">评论系统配置</a></li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/12/05/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-Hexo-Github-pages/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
